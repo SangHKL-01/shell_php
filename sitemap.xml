@@ -9,14 +9,14 @@
     <description>Đây là ví dụ về RSS feed cho trang web</description>
     <language>vi-VN</language>
     <item>
-      <title>&xxe;</title>
+      <title>123</title>
       <link>http://www.example.com/tin1</link>
       <description>Mô tả ngắn gọn về tin số 1</description>
       <pubDate>Wed, 24 Sep 2025 12:00:00 +0700</pubDate>
       <guid>http://www.example.com/tin1</guid>
     </item>
     <item>
-      <title>&xxe;</title>
+      <title>456</title>
       <link>http://www.example.com/tin2</link>
       <description>Mô tả ngắn gọn về tin số 2</description>
       <pubDate>Tue, 23 Sep 2025 15:00:00 +0700</pubDate>
@@ -24,6 +24,7 @@
     </item>
   </channel>
 </rss>
+
 
 
 
