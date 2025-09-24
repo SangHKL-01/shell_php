@@ -1,11 +1,13 @@
-<?xml version="1.0"?>
-<!DOCTYPE rss [
-  <!ENTITY xxe SYSTEM "file:///etc/passwd">
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
   <channel>
-    <title>&xxe;</title>
-    <link>http://example.com</link>
-    <description>Injected RSS</description>
+    <title>Example</title>
+    <link>http://example.com/</link>
+    <description>Example feed</description>
+    <item>
+      <title>Post 1</title>
+      <link>http://example.com/post1</link>
+      <pubDate>Wed, 24 Sep 2025 00:00:00 GMT</pubDate>
+    </item>
   </channel>
 </rss>
